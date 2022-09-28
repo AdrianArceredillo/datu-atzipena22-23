@@ -191,6 +191,8 @@ public class MainMenua {
         System.out.print("\tProbintzia: ");
         String probintzia = scanner.next();
 
+        scanner.close();
+
         if ((!probintzia.equals("Nafarroa")) || (!probintzia.equals("Gipuzkoa"))  || (!probintzia.equals("Araba")) || (!probintzia.equals("Bizkaia"))) {
             outputStreamBerria = new PrintWriter(new FileWriter("mendiencsva/" + probintzia + ".csv"));
         }
