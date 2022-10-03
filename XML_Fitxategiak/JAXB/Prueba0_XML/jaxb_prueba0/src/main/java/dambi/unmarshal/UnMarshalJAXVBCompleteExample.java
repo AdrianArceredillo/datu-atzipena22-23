@@ -1,12 +1,15 @@
-package com.danibuiza.jaxb.ultimate.unmarshal;
+package dambi.unmarshal;
+// package com.danibuiza.jaxb.ultimate.unmarshal;
+
+import dambi.business.*;
+import dambi.business.Countries;
 
 import java.io.File;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 
-import com.danibuiza.jaxb.ultimate.business.Countries;
 
 /**
  * This class shows how to unmarshall a simple XML structure into java classes

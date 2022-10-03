@@ -1,13 +1,15 @@
-package com.danibuiza.jaxb.ultimate.adapter;
+package dambi.adapter;
+// package com.danibuiza.jaxb.ultimate.adapter;
+
+import dambi.business.*;
+import dambi.business.Country;
 
 import java.io.File;
 import java.time.LocalDate;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-
-import com.danibuiza.jaxb.ultimate.business.Country;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 
 /**
  * Simple example of usage of jaxb marshaling functionalities when managing complex classes, in this

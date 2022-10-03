@@ -1,13 +1,16 @@
-package com.danibuiza.jaxb.ultimate.marshal;
+package dambi.marshal;
+//package com.danibuiza.jaxb.ultimate.marshal;
+
+import dambi.business.*;
+import dambi.business.Country;
 
 import java.io.File;
 import java.time.LocalDate;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 
-import com.danibuiza.jaxb.ultimate.business.Country;
 
 /**
  * Simple example of usage of jaxb marshaling functionalities
@@ -28,6 +31,7 @@ public class JaxBExampleSimple
             spain.setCapital( "Madrid" );
             spain.setContinent( "Europe" );
             spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
+            spain.setCreator("Adrian Arceredillo");
 
             
             spain.setPopulation( 45000000 );

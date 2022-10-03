@@ -18,3 +18,5 @@ public final class App {
 
 
 //https://www.javacodegeeks.com/2014/12/jaxb-tutorial-xml-binding.html
+//https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api/4.0.0
+//https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api

@@ -1,4 +1,5 @@
-package com.danibuiza.jaxb.ultimate.xsd;
+package dambi.xsd;
+// package com.danibuiza.jaxb.ultimate.xsd;
 
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;

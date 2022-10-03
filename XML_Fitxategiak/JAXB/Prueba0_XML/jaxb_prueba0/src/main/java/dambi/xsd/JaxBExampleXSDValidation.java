@@ -1,16 +1,19 @@
-package com.danibuiza.jaxb.ultimate.xsd;
+package dambi.xsd;
+// package com.danibuiza.jaxb.ultimate.xsd;
+
+import dambi.business.*;
 
 import java.io.File;
 import java.time.LocalDate;
 
 import javax.xml.XMLConstants;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import com.danibuiza.jaxb.ultimate.business.Country;
+import dambi.business.Country;
 
 /**
  * Example of usage of XSDs for marshaling with validation of the objects involved
