@@ -15,3 +15,6 @@ public final class App {
         System.out.println("Hello World!");
     }
 }
+
+
+//https://www.javacodegeeks.com/2014/12/jaxb-tutorial-xml-binding.html
