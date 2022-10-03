@@ -1,4 +1,4 @@
-package lehenengo_proba;
+package dambi;
 
 import org.junit.jupiter.api.Test;
 
