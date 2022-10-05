@@ -17,6 +17,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 public class Countries
 {
     List<Country> countries;
+    // int importance;
 
     public List<Country> getCountries()
     {
@@ -31,7 +32,7 @@ public class Countries
     {
         this.countries = countries;
     }
-
+    
     /**
      * This method is not used by jaxb, just used for business reasons. In the case that this class
      * would be generated using xml schemas definitions, this method has to be added to the
@@ -59,5 +60,7 @@ public class Countries
         }
         return str.toString();
     }
+
+    
 
 }

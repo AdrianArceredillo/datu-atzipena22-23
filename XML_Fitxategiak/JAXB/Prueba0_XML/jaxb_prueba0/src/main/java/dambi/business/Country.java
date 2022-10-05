@@ -6,6 +6,7 @@ import dambi.adapter.DateAdapter;
 
 import java.time.LocalDate;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -19,7 +20,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * @author dgutierrez-diez
  */
-@XmlType( propOrder = { "name", "capital", "foundation", "continent", "population", "creator" } )
+@XmlType( propOrder = { "name", "capital", "foundation", "continent", "population", "creator", "importance" } )
 @XmlRootElement( name = "Country" )
 public class Country
 {
@@ -34,6 +35,8 @@ public class Country
     int       population;
 
     String      creator;
+
+    int     importance;
 
     public int getPopulation()
     {
@@ -60,12 +63,13 @@ public class Country
     @Override
     public String toString()
     {
-        StringBuffer str = new StringBuffer( "Name: " + getName() + "\n" );
+        StringBuffer str = new StringBuffer("Importance: " + getImportance() + "\n" +
+         "Name: " + getName() + "\n" );
         str.append( "Capital: " + getCapital() + "\n" );
 
         if( getFoundation() != null )
         {
-            str.append( getFoundation().toString() );
+            str.append("Foundation Date: " + getFoundation().toString() );
             str.append( "\n" );
         }
 
@@ -75,6 +79,12 @@ public class Country
             str.append( "\n" );
         }
 
+        if( getPopulation() != 0 )
+        {
+            str.append( "Population: " + getPopulation() );
+            str.append( "\n" );
+        }
+        str.append("\n");
         return str.toString();
     }
 
@@ -122,4 +132,16 @@ public class Country
     {
         this.creator = creator;
     }
+
+    @XmlAttribute( name = "importance", required = true )
+    public void setImportance( int importance )
+    {
+        this.importance = importance;
+    }
+
+    public int getImportance()
+    {
+        return importance;
+    }
+
 }

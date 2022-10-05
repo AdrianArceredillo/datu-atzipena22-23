@@ -30,6 +30,7 @@ public class JaxBExampleSimple
             spain.setName( "Spain" );
             spain.setCapital( "Madrid" );
             spain.setContinent( "Europe" );
+            spain.setImportance(1);
             spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
             spain.setCreator("Adrian Arceredillo");
 

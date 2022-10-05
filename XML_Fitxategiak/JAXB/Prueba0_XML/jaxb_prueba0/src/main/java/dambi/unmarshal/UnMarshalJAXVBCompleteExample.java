@@ -24,7 +24,8 @@ public class UnMarshalJAXVBCompleteExample
         try
         {
 
-            File file = new File( "countries.xml" );
+            File file = new File( "list_countries.xml" );
+            // File file = new File( "countries.xml" );
             JAXBContext jaxbContext = JAXBContext.newInstance( Countries.class );
 
             /**
