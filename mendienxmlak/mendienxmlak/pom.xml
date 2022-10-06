@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>fitxategiak</groupId>
-  <artifactId>fileio</artifactId>
-  <version>lehenetsitakoa</version>
+  <groupId>mendienxmlak</groupId>
+  <artifactId>mendienxmlak</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <properties>
     <maven.compiler.source>1.17</maven.compiler.source>
     <maven.compiler.target>1.17</maven.compiler.target>
@@ -10,7 +10,7 @@
     <junit.version>5.6.0</junit.version>
     <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
-    <checkstyle.version>8.39</checkstyle.version>
+    <checkstyle.version>8.45.1</checkstyle.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
     <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
@@ -22,6 +22,8 @@
   </properties>
   <dependencies>
 
+
+    <!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
@@ -85,7 +87,7 @@
           <dependency>
             <groupId>com.github.ngeor</groupId>
             <artifactId>checkstyle-rules</artifactId>
-            <version>4.8.0</version>
+            <version>4.9.3</version>
           </dependency>
         </dependencies>
         <configuration>

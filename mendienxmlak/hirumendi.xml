@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Mendiak>
+    <Mendia Importance="1">
+        <Mendia_Izena>Aketegi</Mendia_Izena>
+        <Mendia_Altuera>1548</Mendia_Altuera>
+        <Mendia_Probintzia>Gipuzkoa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Importance="4">
+        <Mendia_Izena>Albertia</Mendia_Izena>
+        <Mendia_Altuera>868</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Importance="3">
+        <Mendia_Izena>Alluitz</Mendia_Izena>
+        <Mendia_Altuera>1034</Mendia_Altuera>
+        <Mendia_Probintzia>Bizkaia</Mendia_Probintzia>
+    </Mendia>
+</Mendiak>
