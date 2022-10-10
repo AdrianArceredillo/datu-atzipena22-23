@@ -34,5 +34,8 @@ public class CreateJSON {
         JsonWriter pruebaSalida = Json.createWriter(new FileOutputStream("data/salidaAdibidea.json"));
         pruebaSalida.writeObject(model);
         pruebaSalida.close();
+
+
+        
     }
 }

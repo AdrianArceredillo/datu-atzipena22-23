@@ -1,0 +1,20 @@
+{
+    "Id": "Duke",
+    "value": "Java",
+    "popout": {
+        "menuitem": [
+            {
+                "type": "New",
+                "string": "CreateNewDoc()"
+            },
+            {
+                "type": "New",
+                "string": "CreateNewDoc()"
+            },
+            {
+                "type": "Close",
+                "onclick": "CloseDoc()"
+            }
+        ]
+    }
+}
