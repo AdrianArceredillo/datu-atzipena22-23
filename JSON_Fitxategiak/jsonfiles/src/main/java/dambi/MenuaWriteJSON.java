@@ -12,38 +12,39 @@ import javax.json.JsonStructure;
 import javax.json.JsonWriter;
 
 public class MenuaWriteJSON {
-    public static void main(String[] args) throws FileNotFoundException {
+        public static void main(String[] args) throws FileNotFoundException {
 
-        JsonObject model = Json.createObjectBuilder()
-                .add("Id", "Duke")
-                .add("value", "Java")
-                .add("popout", Json.createObjectBuilder()
-                        .add("menuitem", Json.createArrayBuilder()
-                                .add(Json.createObjectBuilder()
-                                        .add("type", "New")
-                                        .add("string", "CreateNewDoc()"))
-                                .add(Json.createObjectBuilder()
-                                        .add("type", "New")
-                                        .add("string", "CreateNewDoc()"))
-                                .add(Json.createObjectBuilder()
-                                        .add("type", "Close")
-                                        .add("onclick", "CloseDoc()"))))
-                .build();
+                JsonObject model = Json.createObjectBuilder()
+                                .add("popout", Json.createObjectBuilder()
+                                                .add("Id", "Duke")
+                                                .add("value", "Java")
+                                                .add("popout", Json.createObjectBuilder()
+                                                                .add("menuitem", Json.createArrayBuilder()
+                                                                                .add(Json.createObjectBuilder()
+                                                                                                .add("type", "New")
+                                                                                                .add("string", "CreateNewDoc()"))
+                                                                                .add(Json.createObjectBuilder()
+                                                                                                .add("type", "New")
+                                                                                                .add("string", "CreateNewDoc()"))
+                                                                                .add(Json.createObjectBuilder()
+                                                                                                .add("type", "Close")
+                                                                                                .add("onclick", "CloseDoc()")))))
+                                .build();
 
-        System.out.println(model);
+                System.out.println(model);
 
-        try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream("data/Menua2.json"))) {
-            jsonWriter.writeObject(model);
-            jsonWriter.close();
+                try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream("..data/Menua2.json"))) {
+                        jsonWriter.writeObject(model);
+                        jsonWriter.close();
+                }
+
+                // StringWriter stWriter = new StringWriter();
+                // JsonWriter jsonWriter = Json.createWriter(stWriter);
+                // jsonWriter.writeObject(model);
+
+                // jsonWriter.close();
+                // String jsonData = stWriter.toString();
+                // System.out.println(jsonData);
+
         }
-
-        // StringWriter stWriter = new StringWriter();
-        // JsonWriter jsonWriter = Json.createWriter(stWriter);
-        // jsonWriter.writeObject(model);
-
-        // jsonWriter.close();
-        // String jsonData = stWriter.toString();
-        // System.out.println(jsonData);
-
-    }
 }
