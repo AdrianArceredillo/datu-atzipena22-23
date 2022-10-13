@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Mendiak>
+    <Mendia Id="1">
+        <Mendia_Mendia>Aketegi</Mendia_Mendia>
+        <Mendia_Altuera>1548</Mendia_Altuera>
+        <Mendia_Probintzia>Gipuzkoa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="2">
+        <Mendia_Mendia>Albertia</Mendia_Mendia>
+        <Mendia_Altuera>868</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="3">
+        <Mendia_Mendia>Alluitz</Mendia_Mendia>
+        <Mendia_Altuera>1034</Mendia_Altuera>
+        <Mendia_Probintzia>Bizkaia</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="4">
+        <Mendia_Mendia>Anboto</Mendia_Mendia>
+        <Mendia_Altuera>1331</Mendia_Altuera>
+        <Mendia_Probintzia>Bizkaia</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="5">
+        <Mendia_Mendia>Aratz</Mendia_Mendia>
+        <Mendia_Altuera>1443</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="6">
+        <Mendia_Mendia>Arrate</Mendia_Mendia>
+        <Mendia_Altuera>556</Mendia_Altuera>
+        <Mendia_Probintzia>Gipuzkoa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="7">
+        <Mendia_Mendia>Hernio</Mendia_Mendia>
+        <Mendia_Altuera>1075</Mendia_Altuera>
+        <Mendia_Probintzia>Gipuzkoa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="8">
+        <Mendia_Mendia>Ipizte</Mendia_Mendia>
+        <Mendia_Altuera>1062</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="9">
+        <Mendia_Mendia>Jarindo</Mendia_Mendia>
+        <Mendia_Altuera>896</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="10">
+        <Mendia_Mendia>Kapildui</Mendia_Mendia>
+        <Mendia_Altuera>1177</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="11">
+        <Mendia_Mendia>Karakate</Mendia_Mendia>
+        <Mendia_Altuera>749</Mendia_Altuera>
+        <Mendia_Probintzia>Gipuzkoa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="12">
+        <Mendia_Mendia>Kurtzebarri</Mendia_Mendia>
+        <Mendia_Altuera>1133</Mendia_Altuera>
+        <Mendia_Probintzia>Gipuzkoa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="13">
+        <Mendia_Mendia>Lapazarra</Mendia_Mendia>
+        <Mendia_Altuera>1785</Mendia_Altuera>
+        <Mendia_Probintzia>Nafarroa</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="14">
+        <Mendia_Mendia>Mirutegi</Mendia_Mendia>
+        <Mendia_Altuera>1166</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="15">
+        <Mendia_Mendia>Mugarra</Mendia_Mendia>
+        <Mendia_Altuera>964</Mendia_Altuera>
+        <Mendia_Probintzia>Bizkaia</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="16">
+        <Mendia_Mendia>Oiz</Mendia_Mendia>
+        <Mendia_Altuera>1029</Mendia_Altuera>
+        <Mendia_Probintzia>Bizkaia</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="17">
+        <Mendia_Mendia>Soila</Mendia_Mendia>
+        <Mendia_Altuera>993</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="18">
+        <Mendia_Mendia>ToloÃ±o</Mendia_Mendia>
+        <Mendia_Altuera>1263</Mendia_Altuera>
+        <Mendia_Probintzia>Araba</Mendia_Probintzia>
+    </Mendia>
+    <Mendia Id="19">
+        <Mendia_Mendia>Txamantxoia</Mendia_Mendia>
+        <Mendia_Altuera>1945</Mendia_Altuera>
+        <Mendia_Probintzia>Nafarroa</Mendia_Probintzia>
+    </Mendia>
+</Mendiak>
