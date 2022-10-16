@@ -50,25 +50,30 @@ public class Csva {
         Mendiak irakurritakoMendiak = null;
 
         try {
-            JsonReader lerector = Json.createReader(new FileReader(strFileIn));
-            JsonStructure jsonst = lerector.read();
+            JsonReader lector = Json.createReader(new FileReader(strFileIn));
+            JsonStructure jsonst = lector.read();
             JsonArray jsonArray = jsonst.asJsonArray();
             irakurritakoMendiak = new Mendiak();
             for (int i = 0; i < jsonArray.size(); ++i) {
-                JsonObject jsonobj = jsonArray.getJsonObject(i);
-                Mendia mendia = new Mendia();
-                mendia.setId(jsonobj.getInt("id"));
-                mendia.setMendia(jsonobj.getString("Mendia"));
-                mendia.setAltuera(jsonobj.getInt("Altuera"));
-                mendia.setProbintzia(jsonobj.getString("Probintzia"));
+
+                if (i != 0) {
+                    JsonObject jsonobj = jsonArray.getJsonObject(i);
+                    Mendia mendia = new Mendia();
+                    // irakurritakoMendiak = new Mendiak(); //añadido por mi
+                    mendia.setNum(i);
+                    mendia.setId(jsonobj.getInt("id"));
+                    mendia.setMendia(jsonobj.getString("mendia"));
+                    mendia.setAltuera(jsonobj.getInt("altuera"));
+                    mendia.setProbintzia(jsonobj.getString("probintzia"));
+                    irakurritakoMendiak.add(mendia);
+                }
+
             }
-        }
-        catch (Exception e) {
-            System.out.println("Arazoak '" +  strFileIn + "' fitxategia irakurtzerakoan. ");
+        } catch (Exception e) {
+            System.out.println("Arazoak '" + strFileIn + "' fitxategia irakurtzerakoan. ");
         }
         return irakurritakoMendiak;
     }
-
 
     public int idatzi(Mendiak mendiak) {
         int mendiKopurua = 0;
@@ -76,27 +81,25 @@ public class Csva {
         JsonArrayBuilder jab = Json.createArrayBuilder();
         for (Mendia m : mendiak.getMendiak()) {
             jab.add(Json.createObjectBuilder()
-                .add(strFileIn, m.getId())
-                .add(strFileIn, m.getMendia())
-                .add(strFileIn, m.getAltuera())
-                .add(strFileIn, m.getProbintzia())
-                .build());
+                    .add(strFileIn, m.getId())
+                    .add(strFileIn, m.getMendia())
+                    .add(strFileIn, m.getAltuera())
+                    .add(strFileIn, m.getProbintzia())
+                    .build());
 
-                mendiKopurua++;
+            mendiKopurua++;
         }
 
         model = jab.build();
 
-        try(JsonWriter jsonWriter = Json.createWriter(new FileOutputStream(strFileOut))) {
+        try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream(strFileOut))) {
             jsonWriter.writeArray(model);
 
-
-        } catch(FileNotFoundException fnfe) {
+        } catch (FileNotFoundException fnfe) {
             System.out.println("Arazoak fitxategia sortzerakoan. ");
         }
 
         return mendiKopurua;
     }
-
 
 }

@@ -17,7 +17,7 @@ public class Mendiak {
     List<Mendia> mendiak;
 
     public List<Mendia> getMendiak() {
-        return mendiak;
+        return this.mendiak;
     }
 
     /**

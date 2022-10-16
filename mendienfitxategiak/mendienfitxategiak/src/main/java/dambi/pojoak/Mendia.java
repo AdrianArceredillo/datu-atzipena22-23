@@ -17,8 +17,23 @@ public class Mendia {
     int altuera;
     String probintzia;
 
+    int num;
 
-    @XmlAttribute( name = "Id", required = true )
+
+
+
+    @XmlAttribute( name = "Num. ", required = true )
+    public void setNum( int num )
+    {
+        this.num = num;
+    }
+    public int getNum()
+    {
+        return num;
+    }
+
+
+    @XmlElement(name = "Mendia_Id")
     public void setId( int id )
     {
         this.id = id;

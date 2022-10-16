@@ -17,7 +17,8 @@ public class Irakurketa {
 
     public static void main(String[] args) throws IOException {
         System.out.println("\n"); 
-        System.out.println("Irakurri CSVa"); mendiakIrakurri();
+        System.out.println("Irakurri Mendien CSVa"); mendiakIrakurri();
+        System.out.println();
 
     }
 
@@ -26,6 +27,7 @@ public class Irakurketa {
         PrintWriter outputStream = null;
 
         try {
+            //especificamos cuál es el fichero/archivo que deseamos leer (poner la ruta)
             inputStream = new BufferedReader(new FileReader("mendienfitxategiak/Mendiak.csv"));
 
             String lerroa;
@@ -34,15 +36,18 @@ public class Irakurketa {
             while ((lerroa = inputStream.readLine()) != null) {
                 // outputStream.println(lerroa);
                 mendiak = lerroa.split(";");
-                if (lerroZenbakia != 0) {
+                if (lerroZenbakia != 0) {   //evitamos la primera linea del csv
                     System.out.printf("%s %s %s\n", mendiak[0], mendiak[1], mendiak[2]);
 
-                }
+                }                
+                //nos permite saber en qué línea estamos (podemos imprimirlo par ver el contenido del fichero como una lista)
                 lerroZenbakia++;
             }
-        } catch (FileNotFoundException e1) {
-            System.out.println("HOLA");
-        } finally {
+        } 
+        catch (FileNotFoundException e1) {
+            System.out.println("Errorea fitxategia irakurtzerakoan ");
+        } 
+        finally {
             if (inputStream != null) {
                 inputStream.close();
             }

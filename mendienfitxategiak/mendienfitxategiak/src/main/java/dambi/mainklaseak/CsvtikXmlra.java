@@ -23,10 +23,11 @@ public class CsvtikXmlra {
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
 
-        Csva csva = new Csva("mendienfitxategiak/Mendiak.csv", "mendienfitxategiak/Mendiak.xml");
+        Csva csva = new Csva("mendienfitxategiak/Mendiak.csv", "atzipenekoak/Mendiak.xml");
 
         try {
-            inputStream = new BufferedReader(new FileReader("mendienfitxategiak/Mendiak.csv"));
+            //inputStream = new BufferedReader(new FileReader("mendienfitxategiak/Mendiak.csv"));
+            inputStream = new BufferedReader(new FileReader(csva.getStrFileIn().toString()));
 
             String lerroa;
             int lerroZenbakia = 0;
@@ -37,13 +38,15 @@ public class CsvtikXmlra {
                 if (lerroZenbakia != 0) {
                     System.out.printf("%s %s %s %s\n", lerroZenbakia, mendiak[0], mendiak[1], mendiak[2]);
 
+                    //crear un objeto (Mendia) de cada línea leída del fichero CSV
                     Mendia mendiBakoitza = new Mendia();
-                    mendiBakoitza.setId(lerroZenbakia);
-                    mendiBakoitza.setMendia(mendiak[0].toString());
-                    mendiBakoitza.setAltuera(Integer.parseInt(mendiak[1]));
-                    mendiBakoitza.setProbintzia(mendiak[2]);
+                    mendiBakoitza.setNum(lerroZenbakia + 100);              //atributo ("Num.") de cada objecto (Mendia)
+                    mendiBakoitza.setId(lerroZenbakia);                     //elemento "ID" del objeto
+                    mendiBakoitza.setMendia(mendiak[0].toString());         //elemento "Mendia" del objeto
+                    mendiBakoitza.setAltuera(Integer.parseInt(mendiak[1])); //elemento "Altuera" del objeto
+                    mendiBakoitza.setProbintzia(mendiak[2]);                //elemento "Probintzia" del objeto
 
-                    mendiGuztiak.add(mendiBakoitza);
+                    mendiGuztiak.add(mendiBakoitza);    //guardar cada elemento en la lista "mendiGuztiak" (de tipo Mendiak -> lista de Mendia)
 
                 }
                 lerroZenbakia++;
@@ -53,8 +56,10 @@ public class CsvtikXmlra {
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-            jaxbMarshaller.marshal(mendiGuztiak, new File("Mendiak.xml"));
+            //
+            jaxbMarshaller.marshal(mendiGuztiak, new File("mendienfitxategiak/src/main/java/dambi/atzipenekoak/Mendiak.xml"));
+            //C:\Users\AdriAlex\Desktop\DAM_UNI\DAM_2\DAM_2\Acceso_Datos\datu-atzipena22-23\mendienfitxategiak\mendienfitxategiak\src\main\java\dambi\atzipenekoak
+            //jaxbMarshaller.marshal(mendiGuztiak, new File("Mendiak.xml"));
             jaxbMarshaller.marshal(mendiGuztiak, System.out);
 
 
