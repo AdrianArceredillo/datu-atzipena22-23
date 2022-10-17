@@ -10,6 +10,8 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 
+//asda
+
 public class CsvtikXmlra {
 
     private static Mendiak mendiGuztiak = new Mendiak();
