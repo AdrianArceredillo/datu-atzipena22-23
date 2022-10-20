@@ -15,6 +15,7 @@ import javax.json.JsonWriter;
 import dambi.pojoak.Mendia;
 import dambi.pojoak.Mendiak;
 
+
 public class Jsona {
 
     public String strFileIn;
