@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.*;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
@@ -44,12 +45,29 @@ public class MainController {
 
 
 
+    // @PutMapping(value = "/update/{userId}")
+	// public ResponseEntity updateUser(@Valid @RequestBody User user, @PathVariable int userId, @RequestParam String name, @RequestParam String mail) {
+	// 	try {
+	// 		user.setId(userId);
+    //         user.setName(name);
+    //         user.setEmail(mail);
+	// 		userRepository.save(user);
+
+	// 		return ResponseEntity.ok().build();
+
+	// 	} catch (Exception ex) {
+	// 		return ResponseEntity.notFound().build();
+	// 	}
+	// }
+
+
     @PutMapping(value = "/update/{userId}")
-	public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId, @RequestParam String name, @RequestParam String mail) {
+	public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId) {
+	// public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId, @PathVariable String userName, @PathVariable String userMail) {
 		try {
 			user.setId(userId);
-            user.setName(name);
-            user.setEmail(mail);
+			// user.setName(userName);
+			// user.setEmail(userMail);
 			userRepository.save(user);
 
 			return ResponseEntity.ok().build();
@@ -58,6 +76,7 @@ public class MainController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+
 
 	@DeleteMapping(path = "/delete/{userId}")
 	public ResponseEntity deleteUserById(@PathVariable int userId) {
