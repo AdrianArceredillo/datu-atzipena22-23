@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springdoc.core.RequestBodyInfo;
 import org.springframework.*;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
@@ -61,12 +62,13 @@ public class MainController {
 	// }
 
 
-    @PutMapping(value = "/update/{userId}")
-	public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId) {
+    @PutMapping(path = "/update/{userId}")
+	public ResponseEntity<User> updateContact(@Valid @PathVariable int userId, @RequestBody User user) {
 	// public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId, @PathVariable String userName, @PathVariable String userMail) {
 		try {
 			user.setId(userId);
-			// user.setName(userName);
+			// user.setName();
+			// user.setName(user.getName());
 			// user.setEmail(userMail);
 			userRepository.save(user);
 
@@ -90,5 +92,6 @@ public class MainController {
 
 		}
 	}
-
+	
+	
 }
