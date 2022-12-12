@@ -1,0 +1,28 @@
+Download: 
+https://www.mongodb.com/try/download/community-kubernetes-operator
+
+Info/Manual:
+https://www.mongodb.com/docs/manual/
+https://www.mongodb.com/docs/manual/aggregation/
+https://www.mongodb.com/docs/manual/reference/sql-comparison/
+
+
+Hay que instalar Mongo DB Compass -> archivos de programa -> Mongo DB -> Server -> 6.0 -> bin -> InstallCompass.ps1 -> coger código del fichero y ejecutarlo en
+el Power Shell
+
+
+
+https://cloud.mongodb.com/v2/58ff4b6f96e8217795e78af3#clusters
+
+
+
+En el fichero "mongod.cfg", en el apartado "network interfaces", hacer el siguiente cambio:
+
+
+# network interfaces
+net:
+  port: 27017
+#bindIp: 127.0.0.1
+  bindIp: 0.0.0.0	#para que se pueda conectar con cualquiera, pondremos "bindIp: 0.0.0.0"
+
+
