@@ -1,0 +1,9 @@
+Azterketa Spring Rest APIen ingurukoa izango da.
+Mota bitako datu-baseekin konektatutako Rest-ak:
+- Datu-base erlazionalak: Hauetan erlazionatutako klaseak egon daitezke (asoziazioak). Entitateak ondo deklaratzen jakin behar duzue baina ez 
+da operazio konplexurik eskatuko bigarren taula horrekin. 04-accessing-relational-data daukazue eredu moduan.
+	* mapeatzearekin zerikusia daukan galderaren bat sartu daiteke
+- Mongo datu-baseak. 05-mongo-umeak hartu dezakezue eredu moduan.
+Oinarrizko programazioko eta datuen kudeaketari buruzko galderak egon daitezke. Adibidez, MongoAzalpenak orriko azken ariketa.
+Orain arte bezala, garatutako kodigoa aztertuko dut. Nahiz eta Restak ez funtzionatu, ez funtzionatu guztiz ondo, puntuak lortu ditzakezue.
+Funtzionatuko balu, pantailazoa ateratzea eskatuko dut. Gertatu daitekeelako nire makinan arrazoi desberdinengatik gauzak ez funtzionatzea.

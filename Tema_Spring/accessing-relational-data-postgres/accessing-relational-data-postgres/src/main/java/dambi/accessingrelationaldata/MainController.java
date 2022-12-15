@@ -46,30 +46,12 @@ public class MainController {
 
 
 
-    // @PutMapping(value = "/update/{userId}")
-	// public ResponseEntity updateUser(@Valid @RequestBody User user, @PathVariable int userId, @RequestParam String name, @RequestParam String mail) {
-	// 	try {
-	// 		user.setId(userId);
-    //         user.setName(name);
-    //         user.setEmail(mail);
-	// 		userRepository.save(user);
-
-	// 		return ResponseEntity.ok().build();
-
-	// 	} catch (Exception ex) {
-	// 		return ResponseEntity.notFound().build();
-	// 	}
-	// }
-
-
-    @PutMapping(path = "/update/{userId}")
-	public ResponseEntity<User> updateContact(@Valid @PathVariable int userId, @RequestBody User user) {
-	// public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId, @PathVariable String userName, @PathVariable String userMail) {
+	@PutMapping(value = "/update/{userId}")
+	public ResponseEntity updateUser(@Valid @RequestBody User user, @PathVariable int userId, @RequestParam String name, @RequestParam String mail) {
 		try {
 			user.setId(userId);
-			// user.setName();
-			// user.setName(user.getName());
-			// user.setEmail(userMail);
+            user.setName(name);
+            user.setEmail(mail);
 			userRepository.save(user);
 
 			return ResponseEntity.ok().build();
@@ -78,6 +60,24 @@ public class MainController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+
+
+    // @PutMapping(path = "/update/{userId}")
+	// public ResponseEntity<User> updateContact(@Valid @PathVariable int userId, @RequestBody User user) {
+	// // public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId, @PathVariable String userName, @PathVariable String userMail) {
+	// 	try {
+	// 		user.setId(userId);
+	// 		// user.setName();
+	// 		// user.setName(user.getName());
+	// 		// user.setEmail(userMail);
+	// 		userRepository.save(user);
+
+	// 		return ResponseEntity.ok().build();
+
+	// 	} catch (Exception ex) {
+	// 		return ResponseEntity.notFound().build();
+	// 	}
+	// }
 
 
 	@DeleteMapping(path = "/delete/{userId}")
