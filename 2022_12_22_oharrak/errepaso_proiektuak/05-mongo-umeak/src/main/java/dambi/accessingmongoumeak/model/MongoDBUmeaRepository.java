@@ -56,10 +56,43 @@ public class MongoDBUmeaRepository implements UmeaRepository {
         return umeaCollection.deleteMany(eq("izena", izena)).getDeletedCount();
     }
 
+    @Override
+    public long umearen_OpariKopurua(String izena) {
+        // Umea umea= umeaRepository.findById(izena);
+        Umea umea = umeaCollection.find(eq("izena", izena)).first();
+        return umea.getOpariak().size();
+    }
 
     @Override
-    public int findOpariKopuruaUmeko(String umea) {
-        return umeaCollection.find(null, resultClass:null);
+    public List<String> umearen_OpariZerrenda(String izena) {
+        // Umea umea= umeaRepository.findById(izena);
+        Umea umea = umeaCollection.find(eq("izena", izena)).first();
+        List<String> opariak = umea.getOpariak();
+        return opariak;
+        // return umea.getOpariak();
+    }
+
+    // List<Umea> umeak
+
+    @Override
+    public StringBuffer opari_Guztiak() {
+        
+        StringBuffer emaitza = new StringBuffer();
+        List<Umea> umeak = umeaCollection.find().into(new ArrayList<>());
+
+        for (int i = 0; i < umeak.size(); ++i) {
+            for (int j = 0; j < umeak.get(i).getOpariak().size(); ++j) {
+                String opari_bakoitza = umeak.get(i).getOpariak().get(j).toString();
+                emaitza.append(opari_bakoitza + "\n");
+            }
+        }
+
+        return emaitza;
     }
 
 }
+
+// https://www.mongodb.com/docs/manual/reference/method/db.collection.find/#mongodb-method-db.collection.find
+
+// List<Umea> umeak = umeaCollection.find().into(new ArrayList<>());
+// StringBuffer emaitza = new StringBuffer();

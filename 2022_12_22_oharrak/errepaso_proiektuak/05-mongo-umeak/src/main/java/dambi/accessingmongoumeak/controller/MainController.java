@@ -34,6 +34,35 @@ public class MainController {
 		return umeaRepository.findAll();
 	}
 
+
+	@GetMapping(path = "/umearenOpariKopurua/{umeaIzena}")
+	public @ResponseBody long getUmearenOpariKopurua(@Valid @RequestParam String umeaIzena) {
+		// This returns a JSON or XML with the users
+		
+		long opariak_Kopurua = umeaRepository.umearen_OpariKopurua(umeaIzena);
+		return opariak_Kopurua;
+		//return umeaRepository.findAll();
+	}
+
+
+	@GetMapping(path = "/umearenOpariZerrenda/{umeaIzena}")
+	public @ResponseBody List<String> getUmearenOpariZerrenda(@Valid @RequestParam String umeaIzena) {
+		// This returns a JSON or XML with the users
+		List<String> opariak_zerrenda = umeaRepository.umearen_OpariZerrenda(umeaIzena);
+		
+		return opariak_zerrenda;
+		//return umeaRepository.findAll();
+	}
+
+	@GetMapping(path = "/opariGuztiak")
+	public @ResponseBody StringBuffer getUmeGuztienOpariak() {
+		// This returns a JSON or XML with the users
+		StringBuffer opariak_zerrenda = new StringBuffer();
+		opariak_zerrenda = umeaRepository.opari_Guztiak();
+		
+		return opariak_zerrenda;
+	}
+
 	@PostMapping(path = "/umeberria") // Map ONLY POST Requests
 	public @ResponseBody String addNewUser(@RequestParam String izena, @RequestParam List<String> opariak) {
 		// @ResponseBody means the returned String is the response, not a view name

@@ -10,4 +10,8 @@ public interface UmeaRepository {
     Umea findById(String id);
     Umea save(Umea person);
     long delete(String izena);
+    long umearen_OpariKopurua(String izena);
+    List<String> umearen_OpariZerrenda(String izena);
+    // String umeGuztien_Opariak(List<Umea> umeak);
+    StringBuffer opari_Guztiak();
 }
