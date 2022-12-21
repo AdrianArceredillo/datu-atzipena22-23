@@ -1,5 +1,7 @@
 package dambi.accessingrelationaldata;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,14 +46,22 @@ public class MainController {
         return userRepository.findAll();
     }
 
+	
+	@GetMapping(path = "/bat")
+    public @ResponseBody Optional<User> getErabiltzaileBat(int userId) {
+        // This returns a JSON or XML with the users
+        return userRepository.findById(userId);
+    }
 
 
+
+	// public ResponseEntity updateUser(@Valid @RequestBody User user, @PathVariable int userId, @RequestParam String name, @RequestParam String email) {
 	@PutMapping(value = "/update/{userId}")
-	public ResponseEntity updateUser(@Valid @RequestBody User user, @PathVariable int userId, @RequestParam String name, @RequestParam String mail) {
+	public ResponseEntity updateContact(@Valid @RequestBody User user, @PathVariable int userId) {
 		try {
 			user.setId(userId);
-            user.setName(name);
-            user.setEmail(mail);
+            // user.setName(user.getName());
+            // user.setEmail(user.getEmail());
 			userRepository.save(user);
 
 			return ResponseEntity.ok().build();
