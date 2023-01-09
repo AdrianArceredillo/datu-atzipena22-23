@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 /*
- * nombre antiguo -> "AccessingRelationalDataApplicationTests"
+ * nombre antiguo -> "AccessingRelationalDataApplication"
  * 		-> da error al subirlo a Github porque es un nombre demasiado largo
  * 
  * nuevo nombre:

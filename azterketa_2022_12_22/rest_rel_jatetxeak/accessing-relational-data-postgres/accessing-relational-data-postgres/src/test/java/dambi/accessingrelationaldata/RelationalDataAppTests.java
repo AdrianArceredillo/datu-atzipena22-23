@@ -4,8 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-//RelationalDataApp
-//AccessingRelationalDataApplicationTests
+/*
+ * nombre antiguo -> "AccessingRelationalDataApplicationTests"
+ * 		-> da error al subirlo a Github porque es un nombre demasiado largo
+ * 
+ * nuevo nombre:
+ * 		-> RelationalDataAppTests
+ */
 class RelationalDataAppTests {
 
 	@Test
