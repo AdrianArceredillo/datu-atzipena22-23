@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-//RelationalDataApp - nombre cambiado
+//RelationalDataApp
 //AccessingRelationalDataApplicationTests
-class RelationalDataApp {
+class RelationalDataAppTests {
 
 	@Test
 	void contextLoads() {

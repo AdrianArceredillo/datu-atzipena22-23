@@ -4,6 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+/*
+ * nombre antiguo -> "AccessingRelationalDataApplicationTests"
+ * 		-> da error al subirlo a Github porque es un nombre demasiado largo
+ * 
+ * nuevo nombre:
+ * 		-> RelationalDataApp
+ */
 public class RelationalDataApp {
 
 	public static void main(String[] args) {
