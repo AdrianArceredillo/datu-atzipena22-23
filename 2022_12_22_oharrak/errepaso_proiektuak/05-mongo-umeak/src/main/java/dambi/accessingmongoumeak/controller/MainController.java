@@ -54,6 +54,15 @@ public class MainController {
 		//return umeaRepository.findAll();
 	}
 
+	@GetMapping(path = "/findByOparia/{oparia}")
+	public @ResponseBody List<Umea> aurkitu_OpariarenBidez(@Valid @RequestParam String oparia) {
+		// This returns a JSON or XML with the users
+		List<Umea> umeak_opariarekin = umeaRepository.findByOparia(oparia);
+		
+		return umeak_opariarekin;
+		//return umeaRepository.findAll();
+	}
+
 	@GetMapping(path = "/opariGuztiak")
 	public @ResponseBody StringBuffer getUmeGuztienOpariak() {
 		// This returns a JSON or XML with the users
@@ -61,6 +70,18 @@ public class MainController {
 		opariak_zerrenda = umeaRepository.opari_Guztiak();
 		
 		return opariak_zerrenda;
+	}
+
+	@GetMapping(path = "/hiru_Oparia_BainoGehiago")
+	public @ResponseBody List<Umea> hiru_Opari_BainoGehiago() {
+		// This returns a JSON or XML with the users
+		
+		List<Umea> umeak_opari_Asko = umeaRepository.hiru_Opari_BainoGehiago();
+
+		// StringBuffer opariak_zerrenda = new StringBuffer();
+		// opariak_zerrenda = umeaRepository.opari_Guztiak();
+		
+		return umeak_opari_Asko;
 	}
 
 	@PostMapping(path = "/umeberria") // Map ONLY POST Requests
